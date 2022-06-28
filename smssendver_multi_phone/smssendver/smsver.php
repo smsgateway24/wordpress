@@ -12,7 +12,7 @@ define('SHORTINIT', true);
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
 
 $db_host = DB_HOST;
-$db_user = DB_USER; 
+$db_user = DB_USER;
 $db_password = DB_PASSWORD; // Пароль БД
 $db_base = DB_NAME; // Имя БД
 $db_table = "base_smsgateway24"; // Имя Таблицы БД
