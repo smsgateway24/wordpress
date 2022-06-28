@@ -1,0 +1,364 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=WordSection1>
+<input type="button" onclick="history.back();" value="back"/>
+<p class=MsoNormal><b><span style='font-size:22.0pt;line-height:107%'>ПЛАГИН</span></b><b><span
+style='font-size:22.0pt;line-height:107%'> </span></b><b><span
+style='font-size:22.0pt;line-height:107%'>ДЛЯ</span></b><b><span lang=EN-US
+style='font-size:22.0pt;line-height:107%'> WORDPRESS SMS OTP for SmsGateWay 24</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;line-height:107%'>Установка</span></i></b><b><i><span
+style='font-size:14.0pt;line-height:107%'> </span></i></b><b><i><span
+style='font-size:14.0pt;line-height:107%'>через</span></i></b><b><i><span
+style='font-size:14.0pt;line-height:107%'> </span></i></b><b><i><span
+style='font-size:14.0pt;line-height:107%'>файл</span></i></b><b><i><span
+lang=EN-US style='font-size:14.0pt;line-height:107%'>-</span></i></b><b><i><span
+style='font-size:14.0pt;line-height:107%'>менеджер</span></i></b><b><i><span
+lang=EN-US style='font-size:14.0pt;line-height:107%'>:</span></i></b></p>
+
+<p class=MsoNormal><span lang=EN-US>1. </span>Распакуйте архив<span lang=EN-US>
+smssendver.zip </span>в<span lang=EN-US> wp-content/plugins/</span></p>
+
+<p class=MsoNormal>2. In the section Плагины find /SMS OTP for SmsGateWay 24/ и
+Press /Activate/</p>
+
+<p class=MsoNormal>3. In the section /Settigns/ find /SmsGateWay24 Plugin/ - это
+админ панель для общих настроек plugin SmsGateWay24</p>
+
+<p class=MsoNormal>4. Enter shorcode [smsgateway24/] или [smsgateway24country/]
+пользуйтесь</p>
+
+<p class=MsoNormal> </p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;line-height:107%'>Установка
+через панель администратора WORDPRESS:</span></i></b></p>
+
+<p class=MsoNormal>1. Войдите в раздел /Плагины/</p>
+
+<p class=MsoNormal>2. Press раздел /Добавить новый/ </p>
+
+<p class=MsoNormal>3. Press button /Загрузить плагин/</p>
+
+<p class=MsoNormal>4. Press button /Обзор.../</p>
+
+<p class=MsoNormal>5. Upload archive smssendver.zip</p>
+
+<p class=MsoNormal>6. Press button /Activate/</p>
+
+<p class=MsoNormal>7. In the section /Settigns/ find /SmsGateWay24 Plugin/ - это
+админ панель для общих настроек plugin SmsGateWay24</p>
+
+<p class=MsoNormal>8. Enter shorcode [smsgateway24/] или [smsgateway24country/]
+пользуйтесь</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>********************************</p>
+
+<p class=MsoNormal>shorcode plugin для одной страны [smsgateway24/]</p>
+
+<p class=MsoNormal>shorcode plugin со списком стран [smsgateway24country/]</p>
+
+<p class=MsoNormal>********************************</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>smssend.php - файл с кодом отравки смс</p>
+
+<p class=MsoNormal>--------------------------------------------------------------------------------</p>
+
+<p class=MsoNormal>What adjustments can be made to work</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>line 14</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>$selsim = rand(0,1); //Генератор случайного кода для выбора
+симкарты (В ЭТОМ МЕСТЕ МОЖНО ЗАМЕНТЬ rand(0,1) НА ЦИФРУ 0 ИЛИ 1 ЗАВИСИТ КАКОЙ
+СИМКАРТОЙ БУДЕТЕ ПОЛЬЗОВАТЬСЯ )</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>example</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>$selsim = 0;</p>
+
+<p class=MsoNormal>$selsim = 1;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>или</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>line 128</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&quot;sim&quot; =&gt; $selsim, //номер симкарты 0 или 1
+зависит от количиства в смартфоне</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>example</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&quot;sim&quot; =&gt; 0,</p>
+
+<p class=MsoNormal>&quot;sim&quot; =&gt; 1,</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>line 15</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>$codesms = rand(1000,9999); //Генератор случайного кода для
+отправки СМС</p>
+
+<p class=MsoNormal>(ЕСЛИ ДОБАВИТЬ КОЛИЧЕСТВО ЦИФР В $codesms = rand(1000,9999);
+В 1000 ДОБАВИТЬ 0, А 9 К 9999, ТО ДЛИНА КОДА В СМС СТАНЕТ БОЛЬШЕ)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>example</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>$codesms = rand(10000,99999);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>**********************************************************************************************************</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>smssend.html - файл поле ввода номера телефона</p>
+
+<p class=MsoNormal>--------------------------------------------------------------------------------</p>
+
+<p class=MsoNormal>What adjustments can be made to work</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>line<span lang=EN-US> 46</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;script&gt;jQuery(
+function($){$(&quot;#input-callback-phone&quot;).mask(&quot;+9 (999)
+999-99-99&quot;);});&lt;/script&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>скрипт отображения номера телефона (можно заменить маску
+взависимости от вашей страны)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>example</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>mask(&quot;+7 (999) 999-99-99&quot;)</p>
+
+<p class=MsoNormal>mask(&quot;+99(999) 999-99-99&quot;)</p>
+
+<p class=MsoNormal>smssend.html - файл поле ввода номера телефона</p>
+
+<p class=MsoNormal>--------------------------------------------------------------------------------</p>
+
+<p class=MsoNormal>What adjustments can be made to work</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>скрипт отображения номера телефона (можно заменить или
+добавить в список маску взависимости от вашей страны)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>**********************************************************************************************************</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>smssend1.html - файл поле ввода номера телефона</p>
+
+<p class=MsoNormal>--------------------------------------------------------------------------------</p>
+
+<p class=MsoNormal>What adjustments can be made to work</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>lines 22 - 25 и lines 69 - 80</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>example</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>enter  &lt;option value=&quot;short alphabetic country code
+такие же как в /case/&quot;&gt;Название страны +цифры кода страны такиеже как в
+/.mask/&quot;&lt;/option&gt;  </p>
+
+<p class=MsoNormal>enter case &quot;short alphabetic country code&quot;</p>
+
+<p class=MsoNormal>enter mask(&quot;+xx(xx) xxxx-xxxxx&quot; маска вида
+отображения номера телефона для страны</p>
+
+<p class=MsoNormal> </p>
+
+<p class=MsoNormal> <span lang=EN-US>&lt;option value=&quot;ger&quot;&gt;</span>Germany<span
+lang=EN-US> +49&lt;/option&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>    case &quot;ger&quot;:</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         
+$(&quot;#input-callback-phone&quot;).mask(&quot;+49(999) 999-99999&quot;);</span></p>
+
+<p class=MsoNormal><span lang=EN-US>          </span>break;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>**********************************************************************************************************</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>smsver.php - файл верификации кода из смс</p>
+
+<p class=MsoNormal>--------------------------------------------------------------------------------</p>
+
+<p class=MsoNormal>What adjustments can be made to work</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>line<span lang=EN-US> 86</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>header('Location: '.$url_new_pg_db_row);</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>если ее закоментироать и вставить свой код php, то после
+успешного подтверждения кода из смс можно будет</p>
+
+<p class=MsoNormal>execute your command</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>line<span lang=EN-US> 128</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>header('Location: '.$url_new_pg_db_row);</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>если ее закоментироать и вставить свой код php, то после
+неудачного подтверждения кода из смс можно будет</p>
+
+<p class=MsoNormal>execute your command</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>**********************************************************************************************************</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>index.html - файл для работы без shorcode</p>
+
+<p class=MsoNormal>index1.html - файл для работы без shorcode список стран</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>smssend.html - файл ввода номера телефона</p>
+
+<p class=MsoNormal>smssend1.html - файл ввода номера телефона список стран</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>inputcode.html - файл для ввода кода верификации</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>(установите на любой ссылку и они будут работать
+самостоятельно без shorcode, для корректной работы файлов нужно дописать свой
+код)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>example ссылки</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>wp-content/plugins/smssendver/index.html</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>**********************************************************************************************************</p>
+
+</div>
+<input type="button" onclick="history.back();" value="back"/>
+</body>
+
+</html>

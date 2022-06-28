@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <head>
+        <meta charset="UTF-8">
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+
+<div class="modal">	
+                    <form method="post" action="/wp-content/plugins/smssendver/smssend.php" target="ifr" id="fclose" >
+                        <table>
+                               <tr><td>
+							   	   <div class="wrapper">
+										<div class="form-group">
+													<label for="input-callback-phone"></label>
+																
+																<select id="country" class="form-control">
+																<option value="ru"><img src="">Россия +7</option>
+																<option value="ua">Украина +380</option>
+																<option value="by">Белоруссия +375</option>
+																<option value="ger">Germany +49</option>
+															</select>
+											 <input name="myphone" id="input-callback-phone">&nbsp;
+                                <input type="submit" name="sendsms" value="Выслать код" >
+				
+                            <tr><td><br/>
+                            <tr><td>
+                                <td colspan="2" id="_out">
+                        </table>
+	</form>
+	
+	
+	
+</div>
+
+<script type="text/javascript">
+$(function() {
+jQuery(function($) {
+$('#cyr').on('keypress', function() {
+var that = this;
+setTimeout(function() {
+var res = /[^a-zA-Zа-яА-ЯёЁ -]/g.exec(that.value);
+that.value = that.value.replace(res, '');
+}, 0);
+});
+});
+})
+function viewDiv(){
+document.getElementById("div1").style.display = "table-row";
+};
+
+</body>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+
+<script>
+jQuery (function ($) {  
+  $(function() {
+    function maskPhone() {
+      var country = $('#country option:selected').val();
+      switch (country) {
+        case "ru":
+          $("#input-callback-phone").mask("+7(999) 999-99-99");
+          break;
+        case "ua":
+          $("#input-callback-phone").mask("+380(999) 999-99-99");
+          break;
+        case "by":
+          $("#input-callback-phone").mask("+375(999) 999-99-99");
+          break;
+        case "ger":
+          $("#input-callback-phone").mask("+49(999) 999-99999");
+          break;          
+      }    
+    }
+    maskPhone();
+    $('#country').change(function() {
+      maskPhone();
+    });
+  });
+});
+</script>
+
+
+</html>
+	
+</html>
+
+
