@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: SMS OTP for SmsGateWay 24
- * Description: Подтверждение OTP кода по СМС через SmsGateWay 24 - shorcode [smsgateway24/]
+ * Description: Confirming the OTP code by text message via SmsGateWay 24 - shorcode [smsgateway24/]
  * Author:      SmsGateWay24 
  * Version:     1.0
  */

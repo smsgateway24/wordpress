@@ -1,7 +1,7 @@
 <?php
 
 //  SMS OTP for SmsGateWay 24
-//  Подтверждение OTP кода по СМС через SmsGateWay 24 - shorcode [smsgateway24/]
+//  Confirming the OTP code by text message via SmsGateWay 24 - shorcode [smsgateway24/]
 //  SmsGateWay24
 
 // Подключение к базе SQL данных и запись и отправка OTP кода на телефон //
@@ -133,7 +133,7 @@ $paramsArr['smsdata'] = [
 	]
 ];
 
-// Обмен данными с SMSGATEWAY24.COM 
+// Exchanging data with SMSGATEWAY24.COM 
 
 $json = json_encode($paramsArr);
 $arr['datajson'] = $json;

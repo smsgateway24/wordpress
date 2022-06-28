@@ -1,6 +1,6 @@
 <?php
 //  SMS OTP for SmsGateWay 24
-//  Подтверждение OTP кода по СМС через SmsGateWay 24 - shorcode [smsgateway24/]
+//  Confirming the OTP code by text message via SmsGateWay 24 - shorcode [smsgateway24/]
 //  SmsGateWay24
 
 

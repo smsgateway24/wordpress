@@ -1,21 +1,18 @@
 <?php
 //  SMS OTP for SmsGateWay 24
-//  Подтверждение OTP кода по СМС через SmsGateWay 24 - shorcode [smsgateway24/]
+//  Confirming the OTP code by text message via SmsGateWay 24 - shorcode [smsgateway24/]
 //  SmsGateWay24
 
 
-// Подключение к базе SQL данных и верификация OTP кода //
 //----------------------------------------------------------------------------------------------------//
 
-// Подключение к wp-load.php чтобы почитать таблицу в базе данных DB_NAME
+// Connecting to wp-load.php to read a table in the DB_NAME database
 
 define('SHORTINIT', true);
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
 
-// Параметры для подключения
-
 $db_host = DB_HOST;
-$db_user = DB_USER; // Логин БД
+$db_user = DB_USER; 
 $db_password = DB_PASSWORD; // Пароль БД
 $db_base = DB_NAME; // Имя БД
 $db_table = "base_smsgateway24"; // Имя Таблицы БД

@@ -19,13 +19,12 @@
 													<label for="input-callback-phone"></label>
 																
 																<select id="country" class="form-control">
-																<option value="ru"><img src="">Россия +7</option>
-																<option value="ua">Украина +380</option>
-																<option value="by">Белоруссия +375</option>
+																<option value="ru"><img src="">Russia +7</option>
+																<option value="ua">Ukrain +380</option>
 																<option value="ger">Germany +49</option>
 															</select>
 											 <input name="myphone" id="input-callback-phone">&nbsp;
-                                <input type="submit" name="sendsms" value="Выслать код" >
+                                <input type="submit" name="sendsms" value="Send Code" >
 				
                             <tr><td><br/>
                             <tr><td>
@@ -73,9 +72,6 @@ jQuery (function ($) {
           break;
         case "ua":
           $("#input-callback-phone").mask("+380(999) 999-99-99");
-          break;
-        case "by":
-          $("#input-callback-phone").mask("+375(999) 999-99-99");
           break;
         case "ger":
           $("#input-callback-phone").mask("+49(999) 999-99999");
