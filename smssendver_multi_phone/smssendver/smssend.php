@@ -1,7 +1,7 @@
 <?php
 
-//  SMS OTP for SmsGateWay 24
-//  Confirming the OTP code by text message via SmsGateWay 24 - shorcode [smsgateway24/]
+//  SMS OTP for SmsGateWay24
+//  Confirming the OTP code by text message via SmsGateWay24 - shorcode [smsgateway24/]
 //  SmsGateWay24
 
 // Connecting to a SQL database and writing and sending OTP code to the phone //
@@ -36,7 +36,7 @@ try {
     $endpoint = "/getdata/addalotofsms";
     $url = $baseUrl . $endpoint;
     $paramsArr = [];
-    $myphone = htmlspecialchars($_POST['myphone']); //номер телефона введенный пользователем в окне верификации
+    $myphone = htmlspecialchars($_POST['myphone']); //Phone number entered by the user in the verification window
 
     if (empty($myphone)) {
         exit;

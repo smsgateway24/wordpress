@@ -1,18 +1,18 @@
 <?php
 
-//  SMS OTP for SmsGateWay 24
-//  Confirming the OTP code by text message via SmsGateWay 24 - shorcode [smsgateway24/]
+//  SMS OTP for SmsGateWay24
+//  Confirming the OTP code by text message via SmsGateWay24 - shorcode [smsgateway24/]
 //  SmsGateWay24
 
-// Подключение к базе SQL данных и запись и отправка OTP кода на телефон //
+// Connecting to a SQL database and writing and sending OTP code to the phone //
 //----------------------------------------------------------------------------------------------------//
 
 
 
-// Настройка количества симкарт, генератор кода СМС, дата СМС
+// Setting the number of SIM cards, SMS code generator, SMS date
 
-//$selsim = rand(0,1); //Генератор случайного кода для выбора симкарты (В ЭТОМ МЕСТЕ МОЖНО ЗАМЕНТЬ rand(0,1) НА ЦИФРУ 0 ИЛИ 1 ЗАВИСИТ КАКОЙ СИМКАРТОЙ БУДЕТЕ ПОЛЬЗОВАТЬСЯ )
-$codesms = rand(1000,9999); //Генератор случайного кода для отправки СМС (ЕСЛИ ДОБАВИТЬ КОЛИЧЕСТВО ЦИФР В $codesms = rand(1000,9999); В 1000 ДОБАВИТЬ 0, А 9 К 9999, ТО ДЛИНА КОДА В СМС СТАНЕТ БОЛЬШЕ)
+//$selsim = rand(0,1); //Генератор случайного кода For выбора симкарты (В ЭТОМ МЕСТЕ МОЖНО ЗАМЕНТЬ rand(0,1) НА ЦИФРУ 0 or 1 ЗАВИСИТ КАКОЙ СИМКАРТОЙ БУДЕТЕ ПОЛЬЗОВАТЬСЯ )
+$codesms = rand(1000,9999); //Генератор случайного кода For отправки СМС (ЕСЛИ ДОБАВИТЬ КОЛИЧЕСТВО ЦИФР В $codesms = rand(1000,9999); В 1000 ДОБАВИТЬ 0, А 9 К 9999, ТО ДЛИНА КОДА В СМС СТАНЕТ БОЛЬШЕ)
 $datetime = date("Y-m-d H:i:s"); //Дата и время отправки СМС
 
 
@@ -37,7 +37,7 @@ $baseUrl = "https://smsgateway24.com";
 $endpoint = "/getdata/addalotofsms";
 $url = $baseUrl . $endpoint;
 $paramsArr = [];
-$myphone = htmlspecialchars($_POST['myphone']); //номер телефона введенный пользователем в окне верификации
+$myphone = htmlspecialchars($_POST['myphone']); //Phone number entered by the user in the verification window
 
 if (empty($myphone)) {
 exit;
@@ -55,7 +55,7 @@ $db = new PDO("mysql:host=$db_host;dbname=$db_base", $db_user, $db_password);
 
 $db->exec("set names utf8"); 
 
-// Собираем данные из базы для запроса
+// Собираем данные из базы For запроса
 
     $data = array( 
 		'phone' => $myphone,
@@ -77,9 +77,9 @@ $db->exec("set names utf8");
 	
     } catch (PDOException $e) {
 		
-// Если есть ошибка соединения или выполнения запроса, выводим её
+// Если есть ошибка соединения or выполнения запроса, выводим её
         
-		print "Ошибка!: " . $e->getMessage() . "<br/>";
+		print "Error!: " . $e->getMessage() . "<br/>";
     }
 		
 // Имя Таблицы БД admin
@@ -121,14 +121,14 @@ $url_new_pg_db_row = $rowdb['url_new_pg_db'];
 
 // Отсылаем код в СМС
 
-$paramsArr['token'] = "$db_token_row"; //Тоокен для подключения к smsgateway24
+$paramsArr['token'] = "$db_token_row"; //Тоокен For подключения к smsgateway24
 $paramsArr['smsdata'] = [
     [
-		"sendto" => $myphone, //команда отправка на номер телефона введенный пользователем в окне верификации
+		"sendto" => $myphone, //команда отправка на Phone number entered by the user in the verification window
         "body" => "$body_text_row $codesms $body_text_1_row", //текст смс 
         "device_id" => $device_id_row, //номер устройства
         "sim" => $db_sim_row, ///Получение номера симкарты из админ панели
-		//"sim" => $selsim, //номер симкарты 0 или 1 зависит от количиства в смартфоне
+		//"sim" => $selsim, //sim number 0 or 1  depends on the amount in the smartphone
         "urgent" => "1"
 	]
 ];
@@ -167,7 +167,7 @@ $json = json_decode($server_output);
 // Тест - вывод данных на экран
 //echo "Успех. Информация занесена в базу данных";
 
-//Ссылка для перехода на страницу
+//Ссылка For перехода на страницу
    
    //header('Location: inputcode.html');
 			

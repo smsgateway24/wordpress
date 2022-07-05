@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name: SMS OTP for SmsGateWay 24
- * Description: Confirming the OTP code by text message via SmsGateWay 24 - shorcode [smsgateway24/]
+ * Plugin Name: SMS OTP for SmsGateWay24
+ * Description: Confirming the OTP code by text message via SmsGateWay24 - shorcode [smsgateway24/]
  * Author:      SmsGateWay24 
  * Version:     1.0
  */
@@ -27,7 +27,7 @@ echo <<<HTML
 </head>
 <body>
 <center>
-<h3>Верификация телефона по SMS</h3>
+<h3>Verifying your phone by SMS</h3>
 <center>
 <center>
     <iframe src="/wp-content/plugins/smssendver/smssend.html" frameborder="0" ></iframe>
@@ -44,7 +44,7 @@ HTML;
 
 add_shortcode( 'smsgateway24', 'smsgateway24_func' );
 
-// Меню plugin SmsGateWay 24 в панели администратора
+// Меню plugin SmsGateWay24 в панели администратора
 
 add_action('admin_menu', 'smsgateway24plugin_menu'); // регистрация
 
@@ -139,58 +139,58 @@ array( 	'ID' => 1,
 				<td style='text-align:left;'>Номер устройства (device_id):</td>
 				<tr>&nbsp;</tr>
 				<td><input type='text' name='device_id_db' size='30' value='".get_option('device_id_db')."'/></td>
-				<td style='color:#666666;'><i>Идентификатор устройства можно узнать в личном кабинете SmsGateWay24.</i></td>
+				<td style='color:#666666;'><i>The device ID can be found in your personal cabinet SmsGateWay24.</i></td>
 			</tr>
 			<tr>
 		</table>
 		&nbsp;
 		<table>
 			<tr>
-				<td style='text-align:left;'>Номер симкарты:</td>
+				<td style='text-align:left;'>SIM card number:</td>
 				<tr>&nbsp;</tr>
 				<td><input type='text' name='db_sim' size='10' value='".get_option('db_sim')."'/></td>
-				<td style='color:#666666;'><i>Указан в приложении SmsGateWay24.</i></td>
+				<td style='color:#666666;'><i>Specified in  SmsGateWay24.</i></td>
 			</tr>
 
 		</table>
 		&nbsp;
 		<table>
 			<tr>
-				<td style='text-align:left;'>Токен (token):</td>
+				<td style='text-align:left;'>Token</td>
 				<tr>&nbsp;</tr>
 				<td><input type='text' name='db_token' size='90' value='".get_option('db_token')."'/></td>
-				<td style='color:#666666;'><i>Токен можно узнать в личном кабинете SmsGateWay24.</i></td>
+				<td style='color:#666666;'><i>You can find out the token in your personal account of SmsGateWay24.</i></td>
 			</tr>
 
 		</table>
 		&nbsp;
 		<table>
 		<tr>
-				<td style='text-align:left;'>Текст СМС (body):</td>
+				<td style='text-align:left;'>Body:</td>
 				<tr>&nbsp;</tr>
 				<td><input type='text' name='body_text' size='180' value='".get_option('body_text')." ' /></td>
-				<td style='color:#666666;'><i>Enter текст СМС для отправки перед кодом.</i></td>
+				<td style='color:#666666;'><i>Enter the text of SMS  before the code.</i></td>
 				<tr>&nbsp;</tr>
-				<td style='color:#666666;'><i>(example: ВАШ САЙТ - ВАШ КОД:  [код OTP])</i></td>
+				<td style='color:#666666;'><i>(example: YOUR SITE - YOUR CODE:  [OTP code])</i></td>
 				
 			</tr>
 		</table>
 		&nbsp;
 		<table>
 		<tr>
-				<td style='text-align:left;'>Текст СМС (body):</td>
+				<td style='text-align:left;'>Body:</td>
 				<tr>&nbsp;</tr>
 				<td><input type='text' name='body_text_1' size='180' value='".get_option('body_text_1')." ' /></td>
-				<td style='color:#666666;'><i>Enter текст СМС для отправки после кода.</i></td>
+				<td style='color:#666666;'><i>Enter the text of the SMS For text after the code.</i></td>
 				<tr>&nbsp;</tr>
-				<td style='color:#666666;'><i>(example: [код OTP] Спасибо, что выбрали нас!)</i></td>
+				<td style='color:#666666;'><i>(example: [OTP code] Thank you for choosing us!)</i></td>
 				
 			</tr>
 		</table>
 		&nbsp;
 		<table>
 		<tr>
-				<td style='text-align:left;'>Ссылка для перехода на страницу если код из СМС совпал:</td>
+				<td style='text-align:left;'>Link For going to the page if the code from the SMS matched:</td>
 				<tr>&nbsp;</tr>
 				<td><input type='text' name='url_new_pg_db' size='180' value='".get_option('url_new_pg_db')." ' /></td>
 				<td style='color:#666666;'><i>Enter URL.</i></td>
@@ -201,7 +201,7 @@ array( 	'ID' => 1,
 		&nbsp;
 		<table>
 		<tr>
-				<td style='text-align:left;'>Ссылка для перехода на страницу если код из СМС не совпал:</td>
+				<td style='text-align:left;'>Link to the page if the code from the SMS did not match:</td>
 				<tr>&nbsp;</tr>
 				<td><input type='text' name='url_newkill_pg_db' size='180' value='".get_option('url_newkill_pg_db')." ' /></td>
 				<td style='color:#666666;'><i>Enter URL.</i></td>
@@ -227,21 +227,21 @@ array( 	'ID' => 1,
 	
 	echo"
 	<table>
-	<td style='text-align:left;'>Ваш shorcode для добавление plugin: [smsgateway24/]</td> 
+	<td style='text-align:left;'>Your shorcode For adding a plugin: [smsgateway24/]</td> 
 	<td </td> 
 	
 	<tr>&nbsp;</tr>
-	<td style='text-align:left; font-style: italic;'>Автор plugin: SmsGateWay24</td> 
+	<td style='text-align:left; font-style: italic;'>Author plugin: SmsGateWay24</td> 
 	</table>
 	";
 	
 	echo "<a href='/wp-content/plugins/smssendver/readme.html' >Инструкция</a><br>";
 	
-	echo "Вы можете получить информацию о дополнительных настройках plugin:</a><br>";
-	echo "- длина кода СМС (по умолчанию 4 цифры)</a><br>";
-	echo "- установка маски номера телефона для вашей страны (по умолчанию маска (+9 (999) 999-99-99))</a><br>";
-	echo "- выбор сим карты (по умолчанию рандомный выбор между 0 и 1)</a><br>";
-	echo "- замена ссылки редиректа на PHP код после подтверждения СМС</a><br>";
+	echo "You can get information about additional settings plugin:</a><br>";
+	echo "- SMS code length (4 digits by default)</a><br>";
+	echo "- Installation of the telephone number mask For your country (by default the mask (+9 (999) 999-99-99))</a><br>";
+	echo "- SIM card selection (random selection between 0 and 1 by default)</a><br>";
+	echo "- Replacing the Link redirect with a PHP code after SMS confirmation</a><br>";
 	
 
 }
@@ -288,7 +288,7 @@ array( 	'ID' => 1,
     $wpdb->query($sql1);
 	$wpdb->query($sql2);
 	
-// Значения по умолчанию для настроек 
+// Значения по умолчанию For настроек 
 
 	add_option('device_id_db', 'Not set');
 	add_option('db_sim', '0');

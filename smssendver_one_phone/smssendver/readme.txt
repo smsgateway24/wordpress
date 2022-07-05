@@ -1,24 +1,24 @@
 
-ПЛАГИН ДЛЯ WORDPRESS SMS OTP for SmsGateWay 24
+plugin For WORDPRESS SMS OTP for SmsGateWay24
 
-Установка через файл-менеджер:
+Installation through file-manager:
 
-1. Распакуйте архив smssendver.zip в wp-content/plugins/
-2. In the section Плагины find /SMS OTP for SmsGateWay 24/ и Press /Activate/
+1. Unpack archive smssendver.zip в wp-content/plugins/
+2. In the section plugins find /SMS OTP for SmsGateWay24/ и Press /Activate/
 3. In the section /Settigns/ find /SmsGateWay24 Plugin/ - This is the admin panel for the general settings of the plugin SmsGateWay24
-4. Enter shorcode [smsgateway24/] и пользуйтесь
+4. Enter shorcode [smsgateway24/] и use
  
 
-Установка через панель администратора WORDPRESS:
+Installation through admin panel WORDPRESS:
  
-1. Войдите в раздел /Плагины/
-2. Press раздел /Добавить новый/
-3. Press button /Загрузить плагин/
-4. Press button /Обзор.../
+1. Enter the section /plugins/
+2. Press раздел /Add new/
+3. Press button /Upload plugin/
+4. Press button /Browse.../
 5. Upload archive smssendver.zip
 6. Press button /Activate/
 7. In the section /Settigns/ find /SmsGateWay24 Plugin/ - This is the admin panel for the general settings of the plugin SmsGateWay24
-8. Enter shorcode [smsgateway24/] и пользуйтесь
+8. Enter shorcode [smsgateway24/] и use
 
 
 
@@ -27,13 +27,13 @@ shorcode plugin [smsgateway24/]
 ********************************
 
 
-smssend.php - файл с кодом отравки смс
+smssend.php - file with sms code
 --------------------------------------------------------------------------------
 What adjustments can be made to work
 
 line 14
 
-$selsim = rand(0,1); //Генератор случайного кода для выбора симкарты (В ЭТОМ МЕСТЕ МОЖНО ЗАМЕНТЬ rand(0,1) НА ЦИФРУ 0 ИЛИ 1 ЗАВИСИТ КАКОЙ СИМКАРТОЙ БУДЕТЕ ПОЛЬЗОВАТЬСЯ )
+$selsim = rand(0,1); //Генератор случайного кода For выбора симкарты (В ЭТОМ МЕСТЕ МОЖНО ЗАМЕНТЬ rand(0,1) НА ЦИФРУ 0 or 1 ЗАВИСИТ КАКОЙ СИМКАРТОЙ БУДЕТЕ ПОЛЬЗОВАТЬСЯ )
 
 example
 
@@ -44,7 +44,7 @@ $selsim = 1;
 
 line 128
 
-"sim" => $selsim, //номер симкарты 0 или 1 зависит от количиства в смартфоне
+"sim" => $selsim, //sim number 0 or 1  depends on the amount in the smartphone
 
 example
 
@@ -54,7 +54,7 @@ example
 
 line 15
 
-$codesms = rand(1000,9999); //Генератор случайного кода для отправки СМС
+$codesms = rand(1000,9999); //Генератор случайного кода For отправки СМС
 (ЕСЛИ ДОБАВИТЬ КОЛИЧЕСТВО ЦИФР В $codesms = rand(1000,9999); В 1000 ДОБАВИТЬ 0, А 9 К 9999, ТО ДЛИНА КОДА В СМС СТАНЕТ БОЛЬШЕ)
 
 example
@@ -65,7 +65,7 @@ $codesms = rand(10000,99999);
 **********************************************************************************************************
 
 
-smssend.html - файл поле ввода номера телефона
+smssend.html - file Phone number input field
 --------------------------------------------------------------------------------
 What adjustments can be made to work
 
@@ -73,7 +73,7 @@ line 46
 
 <script>jQuery( function($){$("#input-callback-phone").mask("+9 (999) 999-99-99");});</script>
 
-скрипт отображения номера телефона (можно заменить маску взависимости от вашей страны)
+entered by the user in the verification window
 
 example
 
@@ -84,7 +84,7 @@ mask("+99(999) 999-99-99")
 **********************************************************************************************************
 
 
-smsver.php - файл верификации кода из смс
+smsver.php - file verification of the code from the sms
 --------------------------------------------------------------------------------
 What adjustments can be made to work
 
@@ -105,13 +105,13 @@ execute your command
 
 **********************************************************************************************************
 
-index.html - файл для работы без shorcode
-smssend.html - файл ввода номера телефона
-inputcode.html - файл для ввода кода верификации
+index.html - file to work without shorcode
+smssend.html - Phone number entry
+inputcode.html - file to enter the verification code
 
-(установите на любой ссылку и они будут работать самостоятельно без shorcode, для корректной работы файлов нужно дописать свой код)
+(установите на любой ссылку и они будут работать самостоятельно без shorcode, For корректной работы fileов нужно дописать свой код)
 
-example ссылки
+example Link
 
 wp-content/plugins/smssendver/index.html
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: SMS OTP for SmsGateWay 24
+ * Plugin Name: SMS OTP for SmsGateWay24
  * Description: Confirming an OTP code via SMS via SmsGateWay24 - Shortcode [smsgateway24/]
  * Author:      SmsGateWay24
  * Version:     1.0
@@ -43,7 +43,7 @@ HTML;
 
 add_shortcode( 'smsgateway24', 'smsgateway24_func' );
 
-// SmsGateWay 24 plugin menu in the admin panel
+// SmsGateWay24 plugin menu in the admin panel
 
 add_action('admin_menu', 'smsgateway24plugin_menu'); // регистрация
 

@@ -1,8 +1,8 @@
-Plugin For WORDPRESS SMS OTP for SmsGateWay 24
+Plugin For WORDPRESS SMS OTP for SmsGateWay24
 
 Setup through filemanager:
 1. Unzip archive smssendver.zip in wp-content/plugins/
-2. In the section plugins find /SMS OTP for SmsGateWay 24/ and Press /Activate/
+2. In the section plugins find /SMS OTP for SmsGateWay24/ and Press /Activate/
 3. In the section /Settigns/ find /SmsGateWay24 Plugin/ - This is the admin panel for the general settings of the plugin SmsGateWay24
 4. Use shorcode [smsgateway24/]
 

@@ -1,6 +1,6 @@
 <?php
-//  SMS OTP for SmsGateWay 24
-//  Confirming the OTP code by text message via SmsGateWay 24 - shorcode [smsgateway24/]
+//  SMS OTP for SmsGateWay24
+//  Confirming the OTP code by text message via SmsGateWay24 - shorcode [smsgateway24/]
 //  SmsGateWay24
 
 
@@ -12,7 +12,7 @@
 define('SHORTINIT', true);
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
 
-// Параметры для подключения
+// Параметры For подключения
 
 $db_host = DB_HOST;
 $db_user = DB_USER; // Логин БД
@@ -73,7 +73,7 @@ if ($codesms = $code){
 // Тест - вывод данных на монитор	
 //echo "Верификация прошла успешно.";
 	
-//Ссылка для перехода на страницу
+//Ссылка For перехода на страницу
 
 $db_tablex = "table_smsgateway24_admin";
 $db = new PDO("mysql:host=$db_host;dbname=$db_base", $db_user, $db_password);
@@ -115,7 +115,7 @@ if ($codesms != $code){
 // Тест - вывод данных на монитор		
 //echo  "Код введен неверно! Повторите верификацию. ";
 
-//Ссылка для перехода на страницу
+//Ссылка For перехода на страницу
 
 $db_tablex = "table_smsgateway24_admin";
 $db = new PDO("mysql:host=$db_host;dbname=$db_base", $db_user, $db_password);
